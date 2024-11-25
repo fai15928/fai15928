@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Login Form</h2>
+        <form id="loginform">
+        <div>
+            <label>Enter User Name</label>
+            <input type="text" id="txtusername" required/><br><br>
+        </div>
+        <div>
+            <label>Enter Password</label>
+            <input type="text" id="txtPswd" required />
+        </div>
+        <br><br>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById("loginform").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Capture the form data
+            const username = document.getElementById("txtusername").value;
+            const password = document.getElementById("txtPswd").value;
+
+             // Create a JSON object with the captured data
+            const loginData = {
+                "uname": username,
+                "pswd": password
+            };
+
+            // Example of sending the JSON data using Fetch API
+            fetch('https://your-api-endpoint.com/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(loginData)
+            })
+            .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    // Handle success (e.g., redirect to dashboard)
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    // Handle error (e.g., show error message)
+                });
+});
+    </script>
+</body>
+</html>
