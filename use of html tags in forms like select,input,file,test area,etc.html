@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <form action="/submit" method="post">
+        <!-- Form elements go here -->
+    </form>
+    <input type="text" name="username" placeholder="Enter your username" required>
+    <input type="password" name="password" placeholder="Enter your password" required>
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <input type="number" name="age" placeholder="Enter your age">
+    
+    <select name="country">
+        
+    <input type="checkbox" name="subscribe" value="yes"> Subscribe to newsletter
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="file" name="profile_picture" accept="image/*">
+
+    <button type="submit">Submit</button>
+    <input type="reset" value="Reset">
+
+    <input type="hidden" name="user_id" value="12345">
+
+    <form action="/submit" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="uk">india</option>
+            <option value="uk">thailand</option>
+            <option value="uk">south korea</option>
+        </select>
+        
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male"> Male
+        <input type="radio" id="female" name="gender" value="female"> Female
+        
+        <label for="subscribe">Subscribe to newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes"> Yes
+        
+        <label for="file">Message:</label>
+        <textarea id="file" name="file" rows="4" cols="50" placeholder="Enter your file here..."></textarea>
+        
+        
+        
+        <input type="hidden" name="user_id" value="12345">
+        
+        <button type="submit">Submit</button>
+        <input type="reset" value="Reset">
+    </form>
+
+</head>
+<body>
+    
+</body>
+</html>
